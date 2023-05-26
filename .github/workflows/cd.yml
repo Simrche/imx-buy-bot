@@ -21,4 +21,6 @@ jobs:
             git pull origin master
             rm -rf nodes_modules
             yarn
-            pm2 restart buy-eth
+            pm2 start "yarn buy-eth >> /home/simrche/logs/buy-eth.log"
+            pm2 start "yarn buy-imx >> /home/simrche/logs/buy-imx.log"
+            pm2 start "yarn buy-usdc >> /home/simrche/logs/buy-usdc.log"
